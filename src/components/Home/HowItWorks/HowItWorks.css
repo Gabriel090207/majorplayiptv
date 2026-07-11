@@ -1,0 +1,294 @@
+.how-it-works{
+
+    background:#fff;
+
+    padding:130px 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:75px;
+
+}
+
+.section-badge{
+
+    display:inline-flex;
+
+    padding:7px 15px;
+
+    border-radius: 8px;
+
+    background:#ffe9ea;
+
+    color:var(--color-primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+
+}
+
+.section-header h2{
+
+    margin-top:18px;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#111;
+
+}
+
+.section-header span{
+
+    color:var(--color-primary);
+
+}
+
+.how-it-works__steps{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.how-it-works__steps::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:42px;
+    left:10%;
+
+    width:80%;
+    height:2px;
+
+    background:#ffe0e2;
+
+}
+
+.how-it-works__step{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+.how-it-works__icon{
+
+    width:86px;
+    height:86px;
+
+    margin:0 auto;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:2px solid #ffe4e5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--color-primary);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.how-it-works__number{
+
+    width:28px;
+    height:28px;
+
+    margin:18px auto 14px;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.how-it-works__step h3{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#111;
+
+    margin-bottom:12px;
+
+}
+
+.how-it-works__step p{
+
+    max-width:210px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+/* Desktop menor */
+@media (max-width: 1200px) {
+
+  .how-it-works {
+    padding: 110px 0;
+  }
+
+  .section-header {
+    margin-bottom: 60px;
+  }
+
+  .section-header h2 {
+    font-size: 42px;
+  }
+
+  .how-it-works__steps {
+    gap: 24px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .how-it-works {
+    padding: 90px 0;
+  }
+
+  .section-header h2 {
+    font-size: 38px;
+  }
+
+  .how-it-works__steps {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 30px;
+
+  }
+
+  .how-it-works__steps::before {
+    display: none;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+  .how-it-works {
+    padding: 70px 0;
+  }
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .how-it-works__steps {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+  .how-it-works__icon {
+
+    width: 74px;
+    height: 74px;
+
+  }
+
+  .how-it-works__step h3 {
+    font-size: 18px;
+  }
+
+  .how-it-works__step p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  .how-it-works {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .section-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .how-it-works__icon {
+
+    width: 68px;
+    height: 68px;
+
+  }
+
+  .how-it-works__number {
+
+    width: 26px;
+    height: 26px;
+
+    font-size: 11px;
+
+  }
+
+}

@@ -1,0 +1,417 @@
+.trending{
+
+    background:#fff;
+
+    padding:110px 0;
+
+}
+
+.trending__header{
+
+    text-align:center;
+
+}
+
+.trending__badge{
+
+    display:inline-flex;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    background:rgba(229,9,20,.08);
+
+    color:var(--color-primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.trending__title{
+
+    margin-top:18px;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#111;
+
+}
+
+.trending__title span{
+
+    color:var(--color-primary);
+
+}
+
+.trending__categories{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin:45px 0;
+
+}
+
+.trending__categories button{
+
+    background:none;
+
+    font-weight:600;
+
+    color:#666;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.trending__categories .active{
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+}
+
+.trending__slider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.slider-prev,
+.slider-next{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.movie{
+
+    position:relative;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:transform .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.movie img{
+
+    display:block;
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    filter .45s ease;
+
+}
+
+.movie:hover img{
+
+    transform:scale(.88);
+
+    filter:brightness(.92);
+
+}
+
+.movie__badge{
+
+    position:absolute;
+
+    top:12px;
+    left:12px;
+
+    z-index:20;
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+
+.movie::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,.05),
+    0 18px 35px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.movie:hover::before{
+
+    opacity:1;
+
+}
+
+.movie h3{
+
+    margin-top:16px;
+
+    text-align:center;
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.trending__button{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:45px;
+
+}
+
+.trending__button a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 26px;
+
+    border-radius:8px;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.trending__button a:hover{
+
+    background:var(--color-primary-hover);
+
+}
+
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+/* Desktop Menor */
+@media (max-width: 1200px) {
+
+  .trending {
+    padding: 100px 0;
+  }
+
+  .trending__title {
+    font-size: 42px;
+  }
+
+  .trending__categories {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .trending {
+    padding: 90px 0;
+  }
+
+  .trending__title {
+    font-size: 36px;
+  }
+
+  .trending__categories {
+    gap: 12px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+  }
+
+  .trending__categories button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .trending__slider {
+    gap: 12px;
+  }
+
+  .movie img {
+    height: 240px;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+  .trending {
+    padding: 70px 0;
+  }
+
+  .trending__header {
+    text-align: center;
+  }
+
+  .trending__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .trending__categories {
+    gap: 10px;
+    margin: 30px 0;
+    justify-content: center;
+  }
+
+  .trending__categories button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .slider-prev,
+  .slider-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .movie img {
+    height: 320px;
+  }
+
+  .movie h3 {
+    font-size: 14px;
+  }
+
+  .trending__button {
+    margin-top: 35px;
+  }
+
+  .trending__button a {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 20px;
+  }
+
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+
+  .trending {
+    padding: 60px 0;
+  }
+
+  .trending__badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .trending__title {
+    font-size: 26px;
+  }
+
+  .trending__categories {
+    gap: 8px;
+  }
+
+  .trending__categories button {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .slider-prev,
+  .slider-next {
+    display: none;
+  }
+
+  .movie img {
+    height: 320px;
+  }
+
+  .movie h3 {
+    font-size: 13px;
+  }
+
+  .trending__button a {
+    font-size: 13px;
+  }
+
+}

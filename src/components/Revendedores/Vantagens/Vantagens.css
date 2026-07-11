@@ -1,0 +1,158 @@
+.vantagens{
+
+    background:#fff8f8;
+
+    padding:110px 0;
+
+}
+
+.vantagens__box{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:60px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.06);
+
+    border:1px solid #f2f2f2;
+
+}
+
+.vantagens__title{
+
+    text-align:center;
+
+    color:#111;
+
+    font-size:42px;
+
+    font-weight:800;
+
+}
+
+.vantagens__title span{
+
+    color:var(--color-primary);
+
+}
+
+.vantagens__grid{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:35px;
+
+}
+
+.vantagem{
+
+    text-align:center;
+
+}
+
+.vantagem__icon{
+
+    width:86px;
+    height:86px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    border:2px solid #ffe3e3;
+
+    color:var(--color-primary);
+
+    transition:.35s;
+
+}
+
+.vantagem:hover .vantagem__icon{
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    transform:translateY(-6px);
+
+}
+
+.vantagem h3{
+
+    color:#111;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.vantagem p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width:1200px){
+
+.vantagens__grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.vantagens{
+
+padding:80px 0;
+
+}
+
+.vantagens__box{
+
+padding:40px 25px;
+
+}
+
+.vantagens__title{
+
+font-size:30px;
+
+}
+
+.vantagens__grid{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+}

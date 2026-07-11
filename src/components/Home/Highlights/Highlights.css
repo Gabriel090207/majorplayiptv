@@ -1,0 +1,124 @@
+.highlights {
+  position: relative;
+
+  width: min(calc(100% - 40px), 1280px);
+
+  margin: 0 auto;
+
+  /*
+   * Move metade do card para dentro do Hero.
+   * O card fica metade no preto e metade no branco.
+   */
+  transform: translateY(-50%);
+
+  /*
+   * Compensa o espaço que o transform não remove do fluxo.
+   * Este valor corresponde aproximadamente à metade da altura do card.
+   */
+  margin-bottom: -115px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  padding: 28px 20px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #ececec;
+
+  z-index: 30;
+}
+
+.highlight{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.highlight svg{
+
+    color:var(--color-primary);
+
+    margin-bottom:12px;
+
+}
+
+.highlight strong{
+
+    color:#222;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.highlight span{
+
+    margin-top:5px;
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+/* Desktop Menor */
+@media (max-width: 1200px) {
+
+  .highlights {
+
+    width: calc(100% - 40px);
+
+    grid-template-columns: repeat(6, 1fr);
+
+    padding: 24px 18px;
+
+    bottom: -60px;
+
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .highlights {
+
+    width: calc(100% - 40px);
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    padding: 24px;
+
+    bottom: -120px;
+
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+  .highlights {
+    display: none;
+  }
+
+}

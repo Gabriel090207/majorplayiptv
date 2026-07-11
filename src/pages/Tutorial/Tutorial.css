@@ -1,0 +1,380 @@
+.tutorial{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:150px 0 110px;
+
+    background:
+    radial-gradient(circle at 80% 20%,rgba(229,9,20,.15),transparent 35%),
+    linear-gradient(180deg,#080808 0%,#050505 100%);
+
+}
+
+.tutorial__header{
+
+    max-width:780px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.tutorial__badge{
+
+    display:inline-flex;
+
+    padding:8px 18px;
+
+    border-radius:8px;
+
+    background:rgba(229,9,20,.12);
+
+    color:var(--color-primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+
+}
+
+.tutorial__title{
+
+    margin-top:24px;
+
+    color:#fff;
+
+    font-size:58px;
+
+    line-height:1.08;
+
+    font-weight:800;
+
+}
+
+.tutorial__title span{
+
+    color:var(--color-primary);
+
+}
+
+.tutorial__description{
+
+    max-width:680px;
+
+    margin:22px auto 0;
+
+    color:var(--color-text);
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+.tutorial__video{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.35);
+
+    background:#111;
+
+}
+
+.tutorial__video iframe{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.tutorial__content{
+
+    margin-top:70px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    padding:45px;
+
+}
+
+.tutorial__content h2{
+
+    color:#fff;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:35px;
+
+}
+
+.tutorial__features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.tutorial__feature{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.tutorial__feature svg{
+
+    flex-shrink:0;
+
+    color:var(--color-success);
+
+    margin-top:2px;
+
+}
+
+.tutorial__feature span{
+
+    color:var(--color-text);
+
+    line-height:1.7;
+
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.tutorial__cta{
+
+    margin-top:70px;
+
+    text-align:center;
+
+}
+
+.tutorial__cta h3{
+
+    color:#fff;
+
+    font-size:36px;
+
+    font-weight:800;
+
+}
+
+.tutorial__cta p{
+
+    margin-top:12px;
+
+    color:var(--color-text);
+
+    font-size:16px;
+
+}
+
+.tutorial__cta a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:28px;
+
+    padding:18px 34px;
+
+    border-radius:10px;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.tutorial__cta a:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--color-primary-hover);
+
+    box-shadow:0 15px 30px rgba(229,9,20,.28);
+
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width:1200px){
+
+.tutorial__title{
+
+font-size:50px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.tutorial{
+
+padding:130px 0 90px;
+
+}
+
+.tutorial__title{
+
+font-size:42px;
+
+}
+
+.tutorial__features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.tutorial{
+
+padding:120px 0 70px;
+
+}
+
+.tutorial__header{
+
+margin-bottom:45px;
+
+}
+
+.tutorial__title{
+
+font-size:34px;
+
+}
+
+.tutorial__description{
+
+font-size:15px;
+
+}
+
+.tutorial__content{
+
+padding:30px 22px;
+
+margin-top:45px;
+
+}
+
+.tutorial__content h2{
+
+font-size:26px;
+
+margin-bottom:25px;
+
+}
+
+.tutorial__cta{
+
+margin-top:45px;
+
+}
+
+.tutorial__cta h3{
+
+font-size:28px;
+
+}
+
+.tutorial__cta a{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.tutorial__title{
+
+font-size:30px;
+
+}
+
+.tutorial__content{
+
+padding:24px 18px;
+
+}
+
+.tutorial__feature{
+
+padding:16px;
+
+}
+
+.tutorial__cta h3{
+
+font-size:24px;
+
+}
+
+}
