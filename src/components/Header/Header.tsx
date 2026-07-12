@@ -55,11 +55,13 @@ const Header = () => {
         <div className="container header__container">
 
           <button
-            className="header__menuButton"
-            onClick={() => setMenuOpen(true)}
-          >
-            <HiOutlineMenuAlt3 />
-          </button>
+  className="header__menuButton"
+  onClick={() => setMenuOpen(true)}
+  aria-label="Abrir menu"
+  title="Abrir menu"
+>
+  <HiOutlineMenuAlt3 />
+</button>
 
           <Link
             to="/"
@@ -134,11 +136,13 @@ const Header = () => {
           </Link>
 
           <button
-            className="header__sidebarClose"
-            onClick={() => setMenuOpen(false)}
-          >
-            <HiX />
-          </button>
+  className="header__sidebarClose"
+  onClick={() => setMenuOpen(false)}
+  aria-label="Fechar menu"
+  title="Fechar menu"
+>
+  <HiX />
+</button>
 
         </div>
 

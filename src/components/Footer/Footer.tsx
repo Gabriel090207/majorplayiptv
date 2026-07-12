@@ -44,19 +44,31 @@ const Footer = () => {
 
               <div className="footer__social">
 
-                <a href="#">
-                  <FaFacebookF />
-                </a>
+  <a
+    href="#"
+    aria-label="Facebook da MajorPlay"
+    title="Facebook da MajorPlay"
+  >
+    <FaFacebookF />
+  </a>
 
-                <a href="#">
-                  <FaInstagram />
-                </a>
+  <a
+    href="#"
+    aria-label="Instagram da MajorPlay"
+    title="Instagram da MajorPlay"
+  >
+    <FaInstagram />
+  </a>
 
-                <a href="#">
-                  <FaWhatsapp />
-                </a>
+  <a
+    href="#"
+    aria-label="WhatsApp da MajorPlay"
+    title="WhatsApp da MajorPlay"
+  >
+    <FaWhatsapp />
+  </a>
 
-              </div>
+</div>
 
             </div>
 
