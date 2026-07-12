@@ -1,18 +1,18 @@
 # MajorPlay IPTV
 
-Bem-vindo ao site oficial da MajorPlay IPTV.
+> Plataforma de IPTV Premium com canais ao vivo, filmes, séries, esportes e suporte especializado.
 
-A MajorPlay oferece IPTV Premium com canais ao vivo, filmes, séries, esportes e suporte especializado.
+A MajorPlay IPTV oferece planos de IPTV para clientes e revendedores, além de tutoriais e teste gratuito.
 
-## Links
+## Páginas principais
 
-- Site: https://majorplay.com.br/
-- Planos: https://majorplay.com.br/#planos
-- Teste Grátis: https://majorplay.com.br/#teste
-- Revendedores: https://majorplay.com.br/revendedores
-- Tutoriais: https://majorplay.com.br/tutoriais
+- [Página Inicial](https://majorplay.com.br/): Página principal da MajorPlay IPTV.
+- [Planos](https://majorplay.com.br/#planos): Informações sobre os planos disponíveis.
+- [Teste Grátis](https://majorplay.com.br/#teste): Solicite um teste gratuito.
+- [Tutoriais](https://majorplay.com.br/tutoriais): Guias para instalação e configuração.
+- [Revendedores](https://majorplay.com.br/revendedores): Informações para revendedores.
 
 ## Contato
 
-- WhatsApp: https://wa.me/5511999999999
-- E-mail: contato@majorplay.com.br
+- [WhatsApp](https://wa.me/5511999999999): Atendimento e suporte.
+- [E-mail](mailto:contato@majorplay.com.br): Contato por e-mail.
