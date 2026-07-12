@@ -449,6 +449,63 @@
   box-shadow: 0 20px 35px rgba(229, 9, 20, 0.28);
 }
 
+
+/* ==========================================
+   REVEAL ANIMATION
+========================================== */
+
+/* Header */
+
+.servidores__header {
+    opacity: 0;
+    transform: translateY(35px);
+}
+
+.reveal-visible.servidores__header {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+/* Grid */
+
+.servidores__grid {
+    opacity: 0;
+    transform: translateY(45px);
+}
+
+.reveal-visible.servidores__grid {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22,1,.36,1);
+
+    transition-delay: .15s;
+}
+
+/* Footer */
+
+.servidores__footer {
+    opacity: 0;
+    transform: translateY(35px);
+}
+
+.reveal-visible.servidores__footer {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,1,.36,1);
+
+    transition-delay: .3s;
+}
+
 /* ========================= */
 /* RESPONSIVO */
 /* ========================= */

@@ -161,6 +161,59 @@
 
 }
 
+/* ==========================================
+   HERO REVEAL
+========================================== */
+
+/* Conteúdo */
+
+.reseller-hero__content > *{
+    opacity:0;
+    transform:translateY(35px);
+}
+
+.reveal-visible .reseller-hero__badge{
+    opacity:1;
+    transform:translateY(0);
+    transition:.6s ease;
+}
+
+.reveal-visible .reseller-hero__title{
+    opacity:1;
+    transform:translateY(0);
+    transition:.6s ease .1s;
+}
+
+.reveal-visible .reseller-hero__description{
+    opacity:1;
+    transform:translateY(0);
+    transition:.6s ease .2s;
+}
+
+.reveal-visible .reseller-hero__buttons{
+    opacity:1;
+    transform:translateY(0);
+    transition:.6s ease .3s;
+}
+
+
+/* Imagem */
+
+.reseller-hero__image{
+    opacity:0;
+    transform:translateX(120px) scale(.96);
+}
+
+.reveal-visible.reseller-hero__image{
+    opacity:1;
+    transform:translateX(0) scale(1);
+
+    transition:
+        transform 1.4s cubic-bezier(.22,1,.36,1),
+        opacity 1.2s ease;
+
+    transition-delay:.25s;
+}
 /* ========================= */
 /* RESPONSIVO */
 /* ========================= */

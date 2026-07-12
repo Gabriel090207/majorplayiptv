@@ -1,23 +1,28 @@
 import "./Trending.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
+import { useState } from "react";
+import { ArrowRight} from "lucide-react";
 
 import { trending } from "../../../data/trending";
 
 const Trending = () => {
+
+const [category, setCategory] = useState("Destaques");
+
+const filteredMovies = trending.filter(
+  (movie) => movie.category === category
+);
+
+
   return (
     <section className="trending" id="em-alta">
-
       <div className="container">
 
-        <div className="trending__header">
-
+        <Reveal
+          as="div"
+          className="trending__header"
+        >
           <span className="trending__badge">
             EM ALTA AGORA
           </span>
@@ -25,82 +30,97 @@ const Trending = () => {
           <h2 className="trending__title">
             O que está <span>bombando!</span>
           </h2>
+        </Reveal>
 
-        </div>
+        <Reveal
+  as="div"
+  className="trending__categories"
+>
 
-        <div className="trending__categories">
+  <button
+    className={category === "Destaques" ? "active" : ""}
+    onClick={() => setCategory("Destaques")}
+  >
+    Destaques
+  </button>
 
-          <button className="active">Destaques</button>
-          <button>Filmes</button>
-          <button>Séries</button>
-          <button>Novelas</button>
-          <button>Animes</button>
-          <button>Esportes</button>
+  <button
+    className={category === "Filmes" ? "active" : ""}
+    onClick={() => setCategory("Filmes")}
+  >
+    Filmes
+  </button>
 
-        </div>
+  <button
+    className={category === "Séries" ? "active" : ""}
+    onClick={() => setCategory("Séries")}
+  >
+    Séries
+  </button>
 
-        <div className="trending__slider">
+  <button
+    className={category === "Novelas" ? "active" : ""}
+    onClick={() => setCategory("Novelas")}
+  >
+    Novelas
+  </button>
 
-          <button className="slider-prev">
-            <ChevronLeft size={22} />
-          </button>
+  <button
+    className={category === "Animes" ? "active" : ""}
+    onClick={() => setCategory("Animes")}
+  >
+    Animes
+  </button>
 
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={18}
-            slidesPerView={6}
-            navigation={{
-              prevEl: ".slider-prev",
-              nextEl: ".slider-next",
-            }}
-            breakpoints={{
-              320: { slidesPerView: 2 },
-              768: { slidesPerView: 4 },
-              1200: { slidesPerView: 6 },
-            }}
-          >
-            {trending.map((movie) => (
-              <SwiperSlide key={movie.id}>
+  <button
+    className={category === "Esportes" ? "active" : ""}
+    onClick={() => setCategory("Esportes")}
+  >
+    Esportes
+  </button>
 
-                <div className="movie">
+</Reveal>
 
-                  <span className="movie__badge">
-                    Em Alta
-                  </span>
+       <Reveal
+  as="div"
+  className="trending__grid"
+>
 
-                  <img
-                    src={movie.image}
-                    alt={movie.title}
-                  />
+  {filteredMovies.map((movie) => (
 
-                  <h3>{movie.title}</h3>
+    <div
+      key={movie.id}
+      className="movie"
+    >
 
-                </div>
+      <span className="movie__badge">
+        Em Alta
+      </span>
 
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      <img
+        src={movie.image}
+        alt={movie.title}
+      />
 
-          <button className="slider-next">
-            <ChevronRight size={22} />
-          </button>
+      <h3>{movie.title}</h3>
 
-        </div>
+    </div>
 
-        <div className="trending__button">
+  ))}
 
+</Reveal>
+
+        <Reveal
+          as="div"
+          className="trending__button"
+        >
           <a href="#conteudos">
-
             VER TODOS CONTEÚDOS
-
             <ArrowRight size={18} />
-
           </a>
-
-        </div>
+        </Reveal>
 
       </div>
-
     </section>
   );
 };

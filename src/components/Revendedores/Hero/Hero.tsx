@@ -1,4 +1,5 @@
 import "./Hero.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import HeroImage from "../../../assets/revendedor.png";
 
@@ -8,7 +9,10 @@ const Hero = () => {
 
       <div className="container reseller-hero__container">
 
-        <div className="reseller-hero__content">
+        <Reveal
+          as="div"
+          className="reseller-hero__content"
+        >
 
           <span className="reseller-hero__badge">
             ÁREA DO REVENDEDOR
@@ -27,22 +31,29 @@ const Hero = () => {
 
           <div className="reseller-hero__buttons">
 
-            <a href="#cadastro" className="reseller-hero__button">
+            <a
+              href="#cadastro"
+              className="reseller-hero__button"
+            >
               QUERO SER REVENDEDOR
             </a>
 
           </div>
 
-        </div>
+        </Reveal>
 
-        <div className="reseller-hero__image">
+        <Reveal
+          as="div"
+          
+          className="reseller-hero__image"
+        >
 
           <img
             src={HeroImage}
             alt="Revendedor MajorPlay"
           />
 
-        </div>
+        </Reveal>
 
       </div>
 

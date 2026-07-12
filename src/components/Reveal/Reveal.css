@@ -1,0 +1,54 @@
+
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* =========================
+   UP
+========================= */
+
+.reveal-up {
+  transform: translateY(var(--distance, 50px));
+}
+
+/* =========================
+   DOWN
+========================= */
+
+.reveal-down {
+  transform: translateY(calc(var(--distance, 50px) * -1));
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.reveal-left {
+  transform: translateX(calc(var(--distance, 50px) * -1));
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.reveal-right {
+  transform: translateX(var(--distance, 50px));
+}
+
+/* =========================
+   ZOOM
+========================= */
+
+.reveal-zoom {
+  transform: scale(.9);
+}
+
+/* =========================
+   FADE
+========================= */
+
+.reveal-fade {
+  transform: none;
+}

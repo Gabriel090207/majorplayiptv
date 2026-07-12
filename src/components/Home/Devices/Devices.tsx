@@ -1,4 +1,5 @@
 import "./Devices.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import {
   Monitor,
@@ -49,8 +50,10 @@ const Devices = () => {
     <section className="devices" id="download">
       <div className="container">
 
-        <div className="devices__header">
-
+        <Reveal
+          as="div"
+          className="devices__header"
+        >
           <span className="devices__badge">
             ASSISTA ONDE QUISER
           </span>
@@ -58,11 +61,12 @@ const Devices = () => {
           <h2 className="devices__title">
             Compatível com seus <span>dispositivos</span>
           </h2>
+        </Reveal>
 
-        </div>
-
-        <div className="devices__grid">
-
+        <Reveal
+          as="div"
+          className="devices__grid"
+        >
           {devices.map((device) => (
             <div
               key={device.title}
@@ -75,8 +79,7 @@ const Devices = () => {
               <span>{device.title}</span>
             </div>
           ))}
-
-        </div>
+        </Reveal>
 
       </div>
     </section>

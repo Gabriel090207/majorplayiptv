@@ -1,4 +1,5 @@
 import "./FAQ.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import { useRef, useState } from "react";
 import { Minus, Plus } from "lucide-react";
@@ -18,8 +19,10 @@ const FAQ = () => {
     <section className="faq" id="duvidas">
       <div className="container-sm">
 
-        <div className="faq__header">
-
+        <Reveal
+          as="div"
+          className="faq__header"
+        >
           <span className="faq__badge">
             DÚVIDAS FREQUENTES
           </span>
@@ -27,11 +30,12 @@ const FAQ = () => {
           <h2 className="faq__title">
             Tire suas principais <span>dúvidas</span>
           </h2>
+        </Reveal>
 
-        </div>
-
-        <div className="faq__list">
-
+        <Reveal
+          as="div"
+          className="faq__list"
+        >
           {faq.map((item, index) => {
 
             const active = open === item.id;
@@ -68,8 +72,8 @@ const FAQ = () => {
 
                 <div
                   ref={(el) => {
-  refs.current[index] = el;
-}}
+                    refs.current[index] = el;
+                  }}
                   className="faq__content"
                   style={{
                     maxHeight: active
@@ -79,9 +83,7 @@ const FAQ = () => {
                 >
 
                   <div className="faq__answer">
-
                     <p>{item.answer}</p>
-
                   </div>
 
                 </div>
@@ -91,8 +93,7 @@ const FAQ = () => {
             );
 
           })}
-
-        </div>
+        </Reveal>
 
       </div>
     </section>

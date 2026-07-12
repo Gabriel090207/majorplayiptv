@@ -1,4 +1,5 @@
 import "./Vantagens.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import {
   Coins,
@@ -44,11 +45,19 @@ const Vantagens = () => {
 
         <div className="vantagens__box">
 
-          <h2 className="vantagens__title">
-            Vantagens de ser um revendedor <span>MajorPlay</span>
-          </h2>
+          <Reveal
+            as="h2"
+            className="vantagens__title"
+          >
+            <>
+              Vantagens de ser um revendedor <span>MajorPlay</span>
+            </>
+          </Reveal>
 
-          <div className="vantagens__grid">
+          <Reveal
+            as="div"
+            className="vantagens__grid"
+          >
 
             {vantagens.map(({ icon: Icon, title, description }) => (
 
@@ -58,9 +67,7 @@ const Vantagens = () => {
               >
 
                 <div className="vantagem__icon">
-
                   <Icon size={28} strokeWidth={2} />
-
                 </div>
 
                 <h3>{title}</h3>
@@ -71,7 +78,7 @@ const Vantagens = () => {
 
             ))}
 
-          </div>
+          </Reveal>
 
         </div>
 

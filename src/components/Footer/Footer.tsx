@@ -3,8 +3,6 @@ import "./Footer.css";
 import logo from "../../assets/logo.png";
 
 import {
-  Gift,
-  ArrowRight,
   Phone,
   Mail,
 } from "lucide-react";
@@ -19,45 +17,7 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      {/* ================= CTA ================= */}
-
-      <div className="footer__cta">
-
-        <div className="container footer__cta-container">
-
-          <div className="footer__cta-left">
-
-            <div className="footer__gift">
-              <Gift size={34} />
-            </div>
-
-            <div>
-
-              <h2>Teste grátis por 6 horas!</h2>
-
-              <p>
-                Experimente agora e comprove a qualidade
-                do nosso serviço.
-              </p>
-
-            </div>
-
-          </div>
-
-          <a
-            href="#"
-            className="footer__cta-button"
-          >
-
-            QUERO TESTAR AGORA
-
-            <ArrowRight size={18} />
-
-          </a>
-
-        </div>
-
-      </div>
+    
 
       {/* ================= FOOTER ================= */}
 

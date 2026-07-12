@@ -6,6 +6,7 @@ import Trending from "../components/Home/Trending/Trending";
 import Plans from "../components/Home/Plans/Plans";
 import Testimonials from "../components/Home/Testimonials/Testimonials";
 import FAQ from "../components/Home/FAQ/FAQ";
+import CTA from "../components/Home/CTA/CTA";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Plans />
       <Testimonials />
       <FAQ />
+      <CTA />
     </>
   );
 };

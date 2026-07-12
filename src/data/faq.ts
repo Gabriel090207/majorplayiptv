@@ -3,7 +3,7 @@ export const faq = [
     id: 1,
     question: "Como recebo meu acesso?",
     answer:
-      "Após a confirmação do pagamento, seu acesso é liberado automaticamente e enviado para o seu e-mail ou WhatsApp em poucos minutos.",
+      "Após a confirmação do pagamento, nosso sistema envia automaticamente os codigos para o e-mail informado durante a compra. O pedido tambem pode exibir os codigos na tela logo apos a confirmacao.",
   },
   {
     id: 2,

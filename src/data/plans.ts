@@ -8,12 +8,12 @@ export const plans = [
     button: "ASSINAR AGORA",
 
     benefits: [
-      "Entrega automática após o pagamento",
+      "Entrega automática de 1 código apos o pagamento",
       "Canais ao vivo SD, HD e Full HD",
-      "Filmes e séries atualizados",
-      "Compatível com TV Box, Android e iPhone",
-      "Código enviado imediatamente",
-      "Suporte técnico via WhatsApp",
+      "Filmes e séries sempre atualizados",
+      "Compatível com TV Box, Android e IPhone",
+      "Código enviado na hora por e-mail",
+      "Suporte técnico e tutoriais de instalação",
     ],
   },
 
@@ -26,12 +26,12 @@ export const plans = [
     button: "ASSINAR AGORA",
 
     benefits: [
-      "Entrega automática dos códigos",
-      "Melhor custo-benefício",
-      "Pagamento via PIX",
-      "Ativação imediata",
-      "Filmes e séries sempre atualizados",
-      "Suporte técnico dedicado",
+      "Entrega automática de 3 códigos após o pagamento",
+      "3 meses de uso com um unico pedido",
+      "Pagamento via PIX com aprovação rapida",
+      "Códigos exibidos na tela logo apos o pagamento",
+      "Envio por e-mail para manter a consistencia do pedido",
+      "Ideal para testes internos do seu fluxo",
     ],
   },
 
@@ -44,12 +44,12 @@ export const plans = [
     button: "ASSINAR AGORA",
 
     benefits: [
-      "Economia máxima",
-      "Acesso durante 12 meses",
+      "Entrega automatica de 1 código anual apos o pagamento",
+      "Equivalente a varias renovacoes com melhor custo final",
       "Canais SD, HD e Full HD",
-      "Filmes, séries e esportes",
-      "Compatível com todos os dispositivos",
-      "Suporte VIP",
+      "Filmes e séries com acesso em 2 telas",
+      "Funciona em TV Box, Android e Iphone",
+      "Suporte dedicado por todo o periodo",
     ],
   },
 ];

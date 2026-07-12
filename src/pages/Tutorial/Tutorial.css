@@ -86,7 +86,11 @@
 
     overflow:hidden;
 
-    border-radius:22px;
+    max-width: 1100px;
+
+    margin:0 auto;
+
+    border-radius:32px;
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -251,6 +255,43 @@
 
     box-shadow:0 15px 30px rgba(229,9,20,.28);
 
+}
+
+
+/* ==========================================
+   REVEAL ANIMATION
+========================================== */
+
+/* Header */
+
+.tutorial__header {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.reveal-visible.tutorial__header {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Vídeo */
+
+.tutorial__video {
+  opacity: 0;
+  transform: translateY(45px);
+}
+
+.reveal-visible.tutorial__video {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+
+  transition-delay: .15s;
 }
 
 /* ========================= */

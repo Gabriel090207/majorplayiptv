@@ -50,10 +50,10 @@ const Header = () => {
             <a href="#planos">Planos</a>
             <a href="#como-funciona">Como Funciona</a>
             <a href="/tutoriais">Tutoriais</a>
-            <a href="#download">Download</a>
+            
             <a href="#em-alta">Em Alta</a>
             <a href="#duvidas">Dúvidas</a>
-            <a href="#contato">Contato</a>
+            
             <a href="/revendedores">Revendedores</a>
           </nav>
 
@@ -98,13 +98,13 @@ const Header = () => {
 
           <a href="/tutoriais" onClick={() => setMenuOpen(false)}>Tutoriais</a>
 
-          <a href="#download" onClick={() => setMenuOpen(false)}>Download</a>
+          
 
           <a href="#em-alta" onClick={() => setMenuOpen(false)}>Em Alta</a>
 
           <a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a>
 
-          <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
+          
 
           <a href="/revendedores" onClick={() => setMenuOpen(false)}>Revendedores</a>
 

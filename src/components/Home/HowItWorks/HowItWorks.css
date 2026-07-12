@@ -167,6 +167,42 @@
 }
 
 
+/* ==========================================
+   REVEAL ANIMATION
+========================================== */
+
+/* Header */
+
+.section-header {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.reveal-visible.section-header {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Cards */
+
+.how-it-works__steps {
+  opacity: 0;
+  transform: translateY(45px);
+}
+
+.reveal-visible.how-it-works__steps {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+
+  transition-delay: .15s;
+}
+
 /* ========================= */
 /* RESPONSIVO */
 /* ========================= */

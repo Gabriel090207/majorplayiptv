@@ -106,7 +106,7 @@
   letter-spacing: .5px;
   text-transform: uppercase;
 
-  transition: .3s;
+  transition: .1s;
 }
 
 .header__button:hover {

@@ -1,4 +1,5 @@
 import "./HowItWorks.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import {
   Search,
@@ -42,9 +43,10 @@ const HowItWorks = () => {
   return (
     <section className="how-it-works" id="como-funciona">
       <div className="container">
-
-        <div className="section-header">
-
+        <Reveal
+          as="div"
+          className="section-header"
+        >
           <span className="section-badge">
             FÁCIL, RÁPIDO E PRÁTICO
           </span>
@@ -52,11 +54,12 @@ const HowItWorks = () => {
           <h2>
             Como <span>funciona?</span>
           </h2>
+        </Reveal>
 
-        </div>
-
-        <div className="how-it-works__steps">
-
+        <Reveal
+          as="div"
+          className="how-it-works__steps"
+        >
           {steps.map(({ id, icon: Icon, title, description }) => (
             <div
               className="how-it-works__step"
@@ -73,12 +76,9 @@ const HowItWorks = () => {
               <h3>{title}</h3>
 
               <p>{description}</p>
-
             </div>
           ))}
-
-        </div>
-
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import "./Servidores.css";
+import Reveal from "../../../components/Reveal/Reveal";
 
 import {
   Check,
@@ -16,8 +17,10 @@ const Servidores = () => {
     <section className="servidores" id="servidores">
       <div className="container">
 
-        <div className="servidores__header">
-
+        <Reveal
+          as="div"
+          className="servidores__header"
+        >
           <span className="servidores__badge">
             NOSSOS SERVIDORES
           </span>
@@ -30,11 +33,12 @@ const Servidores = () => {
             Trabalhamos com diferentes opções de servidores para você oferecer
             qualidade, variedade e estabilidade aos seus clientes.
           </p>
+        </Reveal>
 
-        </div>
-
-        <div className="servidores__grid">
-
+        <Reveal
+          as="div"
+          className="servidores__grid"
+        >
           {servidores.map((servidor) => (
             <article
               key={servidor.id}
@@ -57,11 +61,11 @@ const Servidores = () => {
                   </span>
                 )}
 
-             
-              
-
                 <div className="servidor__play">
-                  <Play size={22} fill="currentColor" />
+                  <Play
+                    size={22}
+                    fill="currentColor"
+                  />
                 </div>
 
               </div>
@@ -123,11 +127,12 @@ const Servidores = () => {
 
             </article>
           ))}
+        </Reveal>
 
-        </div>
-
-        <div className="servidores__footer">
-
+        <Reveal
+          as="div"
+          className="servidores__footer"
+        >
           <p>
             Ainda está em dúvida sobre qual servidor escolher?
           </p>
@@ -136,11 +141,13 @@ const Servidores = () => {
             href="#cadastro"
             className="servidores__button"
           >
-            <Play size={18} fill="currentColor" />
+            <Play
+              size={18}
+              fill="currentColor"
+            />
             CONHECER TODOS OS SERVIDORES
           </a>
-
-        </div>
+        </Reveal>
 
       </div>
     </section>
