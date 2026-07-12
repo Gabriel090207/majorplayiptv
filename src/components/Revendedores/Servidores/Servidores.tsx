@@ -12,7 +12,27 @@ import {
 
 import { servidores } from "../../../data/servidores";
 
-const Servidores = () => {
+interface ServidoresProps {
+  limit?: number;
+  buttonText?: string;
+  buttonHref?: string;
+
+  footerButtonText?: string;
+  footerButtonHref?: string;
+}
+
+const Servidores = ({
+  limit,
+  buttonText = "QUERO REVENDER",
+  
+
+  footerButtonText = "CONHECER TODOS OS SERVIDORES",
+  footerButtonHref = "/servidores",
+}: ServidoresProps) => {
+  const listaServidores = limit
+    ? servidores.slice(0, limit)
+    : servidores;
+
   return (
     <section className="servidores" id="servidores">
       <div className="container">
@@ -35,18 +55,13 @@ const Servidores = () => {
           </p>
         </Reveal>
 
-        <Reveal
-          as="div"
-          className="servidores__grid"
-        >
-          {servidores.map((servidor) => (
+        <div className="servidores__grid">
+  {listaServidores.map((servidor) => (
             <article
               key={servidor.id}
               className="servidor"
             >
-
               <div className="servidor__image">
-
                 <img
                   src={servidor.image}
                   alt={`Servidor ${servidor.title}`}
@@ -67,11 +82,9 @@ const Servidores = () => {
                     fill="currentColor"
                   />
                 </div>
-
               </div>
 
               <div className="servidor__content">
-
                 <h3>{servidor.title}</h3>
 
                 <p className="servidor__description">
@@ -79,7 +92,6 @@ const Servidores = () => {
                 </p>
 
                 <div className="servidor__features">
-
                   <div className="servidor__feature">
                     <Tv size={18} />
                     <span>{servidor.channels}</span>
@@ -99,11 +111,9 @@ const Servidores = () => {
                     <Radio size={18} />
                     <span>{servidor.quality}</span>
                   </div>
-
                 </div>
 
                 <div className="servidor__benefits">
-
                   <span>
                     <Check size={15} />
                     Atualizações frequentes
@@ -113,21 +123,20 @@ const Servidores = () => {
                     <Check size={15} />
                     Suporte especializado
                   </span>
-
                 </div>
 
                 <a
-                  href="#cadastro"
-                  className="servidor__button"
-                >
-                  QUERO REVENDER
-                </a>
-
+  href="https://wa.me/5511999999999"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="servidor__button"
+>
+  {buttonText}
+</a>
               </div>
-
             </article>
           ))}
-        </Reveal>
+        </div>
 
         <Reveal
           as="div"
@@ -137,16 +146,16 @@ const Servidores = () => {
             Ainda está em dúvida sobre qual servidor escolher?
           </p>
 
-          <a
-            href="#cadastro"
-            className="servidores__button"
-          >
-            <Play
-              size={18}
-              fill="currentColor"
-            />
-            CONHECER TODOS OS SERVIDORES
-          </a>
+         <a
+  href={footerButtonHref}
+  className="servidores__button"
+>
+  <Play
+    size={18}
+    fill="currentColor"
+  />
+  {footerButtonText}
+</a>
         </Reveal>
 
       </div>

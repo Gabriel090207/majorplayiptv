@@ -116,4 +116,56 @@ export const servidores: Servidor[] = [
     quality: "Full HD e 4K",
    
   },
+  {
+    id: 9,
+    title: "INVICTOS",
+    image:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    destaque: false,
+    description: "Servidor rápido, simples e com boa estabilidade.",
+    channels: "+1.800 canais",
+    movies: "+12.000 filmes",
+    series: "+4.000 séries",
+    quality: "HD e Full HD",
+   
+  },
+  {
+    id: 10,
+    title: "TOPZ TV",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    destaque: false,
+    description: "Conteúdo variado com carregamento rápido e eficiente.",
+    channels: "+2.100 canais",
+    movies: "+13.000 filmes",
+    series: "+4.200 séries",
+    quality: "HD e Full HD",
+   
+  },
+  {
+    id: 11,
+    title: "BR PATCH",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    destaque: false,
+    description: "Boa compatibilidade com diversos dispositivos.",
+    channels: "+1.900 canais",
+    movies: "+11.000 filmes",
+    series: "+3.800 séries",
+    quality: "HD e Full HD",
+   
+  },
+  {
+    id: 12,
+    title: "PRIMELUX",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    destaque: false,
+    description: "Servidor premium com excelente qualidade de imagem.",
+    channels: "+2.600 canais",
+    movies: "+17.000 filmes",
+    series: "+5.500 séries",
+    quality: "Full HD e 4K",
+   
+  },
 ];

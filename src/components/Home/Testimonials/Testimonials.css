@@ -184,3 +184,128 @@
 
   transition-delay: .15s;
 }
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+/* Desktop Menor */
+@media (max-width: 1200px) {
+
+  .testimonials {
+    padding: 120px 0;
+  }
+
+  .testimonials__title {
+    font-size: 42px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .testimonials {
+    padding: 90px 0;
+  }
+
+  .testimonials__header {
+    margin-bottom: 45px;
+  }
+
+  .testimonials__title {
+    font-size: 36px;
+  }
+
+  .testimonial {
+    padding: 26px;
+  }
+
+  .testimonial__text {
+    font-size: 14px;
+  }
+
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+  .testimonials {
+    padding: 70px 0;
+  }
+
+  .testimonials__header {
+    margin-bottom: 35px;
+  }
+
+  .testimonials__title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .testimonial {
+    padding: 24px;
+  }
+
+  .testimonial__quote {
+    top: 18px;
+    right: 18px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .testimonial__text {
+    margin: 20px 0;
+    line-height: 1.7;
+  }
+
+  .testimonial__user img {
+    width: 52px;
+    height: 52px;
+  }
+
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+
+  .testimonials {
+    padding: 60px 0;
+  }
+
+  .testimonials__badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .testimonials__title {
+    font-size: 26px;
+  }
+
+  .testimonial {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .testimonial__quote {
+    display: none;
+  }
+
+  .testimonial__stars svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .testimonial__text {
+    font-size: 13px;
+  }
+
+  .testimonial__user strong {
+    font-size: 14px;
+  }
+
+  .testimonial__user span {
+    font-size: 12px;
+  }
+
+}

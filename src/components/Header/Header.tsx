@@ -2,11 +2,16 @@ import "./Header.css";
 import Logo from "../../assets/logo.png";
 
 import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,12 +20,9 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Bloqueia o scroll quando a sidebar estiver aberta
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
 
@@ -28,6 +30,24 @@ const Header = () => {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  const goToSection = (section: string) => {
+    setMenuOpen(false);
+
+    if (location.pathname === "/") {
+      document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      return;
+    }
+
+    navigate("/", {
+      state: {
+        scrollTo: section,
+      },
+    });
+  };
 
   return (
     <>
@@ -41,25 +61,54 @@ const Header = () => {
             <HiOutlineMenuAlt3 />
           </button>
 
-          <a href="#inicio" className="header__logo">
-            <img src={Logo} alt="Major Play IPTV Premium" />
-          </a>
+          <Link
+            to="/"
+            className="header__logo"
+          >
+            <img
+              src={Logo}
+              alt="Major Play IPTV Premium"
+            />
+          </Link>
 
           <nav className="header__nav">
-            <a href="/">Início</a>
-            <a href="#planos">Planos</a>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="/tutoriais">Tutoriais</a>
-            
-            <a href="#em-alta">Em Alta</a>
-            <a href="#duvidas">Dúvidas</a>
-            
-            <a href="/revendedores">Revendedores</a>
+
+            <button onClick={() => goToSection("inicio")}>
+              Início
+            </button>
+
+            <button onClick={() => goToSection("planos")}>
+              Planos
+            </button>
+
+            <button onClick={() => goToSection("como-funciona")}>
+              Como Funciona
+            </button>
+
+            <Link to="/tutoriais">
+              Tutoriais
+            </Link>
+
+            <button onClick={() => goToSection("em-alta")}>
+              Em Alta
+            </button>
+
+            <button onClick={() => goToSection("duvidas")}>
+              Dúvidas
+            </button>
+
+            <Link to="/revendedores">
+              Revendedores
+            </Link>
+
           </nav>
 
-          <a href="#teste" className="header__button">
+          <button
+            className="header__button"
+            onClick={() => goToSection("teste")}
+          >
             TESTE GRÁTIS
-          </a>
+          </button>
 
         </div>
       </header>
@@ -73,9 +122,16 @@ const Header = () => {
 
         <div className="header__sidebarHeader">
 
-          <a href="#inicio" className="header__sidebarLogo">
-            <img src={Logo} alt="Major Play IPTV Premium" />
-          </a>
+          <Link
+            to="/"
+            className="header__sidebarLogo"
+            onClick={() => setMenuOpen(false)}
+          >
+            <img
+              src={Logo}
+              alt="Major Play IPTV Premium"
+            />
+          </Link>
 
           <button
             className="header__sidebarClose"
@@ -88,25 +144,39 @@ const Header = () => {
 
         <nav className="header__sidebarNav">
 
-          <a href="/" onClick={() => setMenuOpen(false)}>Início</a>
+          <button onClick={() => goToSection("inicio")}>
+            Início
+          </button>
 
-          <a href="#planos" onClick={() => setMenuOpen(false)}>Planos</a>
+          <button onClick={() => goToSection("planos")}>
+            Planos
+          </button>
 
-          
+          <button onClick={() => goToSection("como-funciona")}>
+            Como Funciona
+          </button>
 
-          <a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como Funciona</a>
+          <Link
+            to="/tutoriais"
+            onClick={() => setMenuOpen(false)}
+          >
+            Tutoriais
+          </Link>
 
-          <a href="/tutoriais" onClick={() => setMenuOpen(false)}>Tutoriais</a>
+          <button onClick={() => goToSection("em-alta")}>
+            Em Alta
+          </button>
 
-          
+          <button onClick={() => goToSection("duvidas")}>
+            Dúvidas
+          </button>
 
-          <a href="#em-alta" onClick={() => setMenuOpen(false)}>Em Alta</a>
-
-          <a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a>
-
-          
-
-          <a href="/revendedores" onClick={() => setMenuOpen(false)}>Revendedores</a>
+          <Link
+            to="/revendedores"
+            onClick={() => setMenuOpen(false)}
+          >
+            Revendedores
+          </Link>
 
         </nav>
 
