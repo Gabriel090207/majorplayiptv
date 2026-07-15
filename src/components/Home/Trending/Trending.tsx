@@ -72,12 +72,7 @@ const filteredMovies = trending.filter(
     Animes
   </button>
 
-  <button
-    className={category === "Esportes" ? "active" : ""}
-    onClick={() => setCategory("Esportes")}
-  >
-    Esportes
-  </button>
+
 
 </Reveal>
 
@@ -86,27 +81,46 @@ const filteredMovies = trending.filter(
   className="trending__grid"
 >
 
-  {filteredMovies.map((movie) => (
+  {filteredMovies.length > 0 ? (
 
-    <div
-      key={movie.id}
-      className="movie"
-    >
+    filteredMovies.map((movie) => (
 
-      <span className="movie__badge">
-        Em Alta
-      </span>
+      <div
+        key={movie.id}
+        className="movie"
+      >
 
-      <img
-        src={movie.image}
-        alt={movie.title}
-      />
+        <span className="movie__badge">
+          Em Alta
+        </span>
 
-      <h3>{movie.title}</h3>
+        <img
+          src={movie.image}
+          alt={movie.title}
+        />
+
+        <h3>{movie.title}</h3>
+
+      </div>
+
+    ))
+
+  ) : (
+
+    <div className="trending__empty">
+
+      <h3>
+        Conteúdo em breve
+      </h3>
+
+      <p>
+        Estamos preparando novos destaques para esta categoria.
+        Volte em breve para conferir as novidades.
+      </p>
 
     </div>
 
-  ))}
+  )}
 
 </Reveal>
 

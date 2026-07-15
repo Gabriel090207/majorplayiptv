@@ -94,9 +94,11 @@
 
 .trending__grid{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(6,1fr);
+    flex-wrap:wrap;
+
+    justify-content:center;
 
     gap:18px;
 
@@ -112,6 +114,10 @@
     border-radius:18px;
 
     overflow:hidden;
+
+    flex:0 0 200px;
+
+max-width:200px;
 
     transition: transform .6s cubic-bezier(.22, 1, .36, 1);
 
@@ -418,9 +424,14 @@
   }
 
   .trending__grid{
-    grid-template-columns:repeat(2,1fr);
-}
 
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
 }
 
 /* Celulares Pequenos */
@@ -464,5 +475,58 @@
   .trending__button a {
     font-size: 13px;
   }
+
+}
+
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.trending__empty{
+
+    grid-column:1/-1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:80px 30px;
+
+    border-radius:20px;
+
+    background:#fafafa;
+
+    border:1px solid #ececec;
+
+    text-align:center;
+
+}
+
+.trending__empty h3{
+
+    color:#111;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.trending__empty p{
+
+    max-width:520px;
+
+    margin-top:14px;
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.7;
 
 }
