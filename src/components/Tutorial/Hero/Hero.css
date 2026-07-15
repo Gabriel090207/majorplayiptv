@@ -1,0 +1,204 @@
+.tutorial-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-top: 150px;
+    padding-bottom: 90px;
+
+    background:
+        radial-gradient(circle at 80% 35%, rgba(229,9,20,.18), transparent 35%),
+        linear-gradient(180deg,#080808 0%,#050505 100%);
+
+}
+
+.tutorial-hero__container{
+
+    position: relative;
+
+    min-height: 280px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.tutorial-hero__content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    text-align:center;
+
+}
+
+.tutorial-hero__badge{
+
+    display:inline-flex;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.tutorial-hero__title{
+
+    margin-top:24px;
+
+    color:#fff;
+
+    font-size:60px;
+
+    line-height:1.08;
+
+    font-weight:800;
+
+}
+
+.tutorial-hero__title span{
+
+    color:var(--color-primary);
+
+}
+
+.tutorial-hero__description{
+
+    max-width:900px;
+
+    margin:24px auto 0;
+
+    color:var(--color-text);
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   HERO REVEAL
+========================================== */
+
+.tutorial-hero__content > *{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+}
+
+.reveal-visible .tutorial-hero__badge{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.6s ease;
+
+}
+
+.reveal-visible .tutorial-hero__title{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.6s ease .1s;
+
+}
+
+.reveal-visible .tutorial-hero__description{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.6s ease .2s;
+
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width:992px){
+
+    .tutorial-hero{
+
+        padding-top:130px;
+
+        padding-bottom:80px;
+
+    }
+
+    .tutorial-hero__title{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .tutorial-hero{
+
+        padding-top:120px;
+
+        padding-bottom:70px;
+
+    }
+
+    .tutorial-hero__title{
+
+        font-size:36px;
+
+    }
+
+    .tutorial-hero__description{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .tutorial-hero{
+
+        padding-top:110px;
+
+        padding-bottom:60px;
+
+    }
+
+    .tutorial-hero__title{
+
+        font-size:30px;
+
+    }
+
+    .tutorial-hero__description{
+
+        font-size:14px;
+
+    }
+
+}

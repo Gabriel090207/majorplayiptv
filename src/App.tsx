@@ -7,7 +7,7 @@ import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 
 import Home from "./pages/Home";
 import Revendedores from "./pages/Revendedores";
-import Tutorial from "./pages/Tutorial/Tutorial";
+import Tutorial from "./pages/Tutorial";
 import ServidoresPage from "./pages/Servidores/Servidores";
 
 const App = () => {

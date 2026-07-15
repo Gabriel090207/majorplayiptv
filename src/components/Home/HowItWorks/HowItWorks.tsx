@@ -21,7 +21,7 @@ const steps = [
     icon: BadgeCheck,
     title: "Receba seu acesso",
     description:
-      "Enviaremos seus dados de acesso rapidamente pelo WhatsApp.",
+      "Enviaremos seus dados de acesso rapidamente pelo Email.",
   },
   {
     id: "03",
