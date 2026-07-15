@@ -5,7 +5,7 @@ import {
   Search,
   BadgeCheck,
   MonitorCog,
-  Sparkles,
+  Tv,
 } from "lucide-react";
 
 const steps = [
@@ -14,28 +14,28 @@ const steps = [
     icon: Search,
     title: "Escolha seu plano",
     description:
-      "Selecione o plano ideal para você e faça seu pedido.",
+      "Selecione o plano ideal para o seu perfil e conclua seu pedido de forma rápida e segura.",
   },
   {
     id: "02",
     icon: BadgeCheck,
-    title: "Receba seu acesso",
+    title: "Receba seus dados de acesso",
     description:
-      "Enviaremos seus dados de acesso rapidamente pelo Email.",
+      "Após a confirmação do pagamento, enviaremos rapidamente seus dados de acesso por e-mail.",
   },
   {
     id: "03",
     icon: MonitorCog,
-    title: "Configure em minutos",
+    title: "Instale e configure",
     description:
-      "Instale em qualquer dispositivo seguindo nosso tutorial.",
+      "Baixe o aplicativo compatível com seu dispositivo e siga nosso tutorial para configurar tudo em poucos minutos.",
   },
   {
     id: "04",
-    icon: Sparkles,
-    title: "Aproveite",
+    icon: Tv,
+    title: "Aproveite a MajorPlay",
     description:
-      "Assista milhares de conteúdos com qualidade e estabilidade.",
+      "Assista canais ao vivo, filmes e séries com qualidade, estabilidade e suporte sempre que precisar.",
   },
 ];
 
@@ -43,17 +43,23 @@ const HowItWorks = () => {
   return (
     <section className="how-it-works" id="como-funciona">
       <div className="container">
+
         <Reveal
           as="div"
           className="section-header"
         >
           <span className="section-badge">
-            FÁCIL, RÁPIDO E PRÁTICO
+            PASSO A PASSO
           </span>
 
           <h2>
-            Como <span>funciona?</span>
+            Como começar a usar a <span>MajorPlay IPTV?</span>
           </h2>
+
+          <p>
+            Do pedido ao primeiro acesso, todo o processo é simples,
+            rápido e leva apenas alguns minutos.
+          </p>
         </Reveal>
 
         <Reveal
@@ -79,6 +85,7 @@ const HowItWorks = () => {
             </div>
           ))}
         </Reveal>
+
       </div>
     </section>
   );

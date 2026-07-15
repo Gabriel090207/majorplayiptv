@@ -4,7 +4,6 @@ export const testimonials = [
     name: "Gabriel Oliveira",
     role: "Cliente desde 2022",
     rating: 5,
-    image: "https://i.pravatar.cc/150?img=11",
     text:
       "Melhor IPTV que já utilizei. Instalação rápida, canais funcionando perfeitamente e filmes sempre atualizados.",
   },
@@ -13,7 +12,6 @@ export const testimonials = [
     name: "Carlos Henrique",
     role: "Cliente Premium",
     rating: 5,
-    image: "https://i.pravatar.cc/150?img=15",
     text:
       "Uso diariamente para assistir futebol e nunca tive problemas. Qualidade excelente e suporte muito rápido.",
   },
@@ -22,9 +20,7 @@ export const testimonials = [
     name: "Amanda Souza",
     role: "Cliente há 1 ano",
     rating: 5,
-    image: "https://i.pravatar.cc/150?img=32",
     text:
       "Comprei por indicação e valeu muito a pena. Funcionou muito bem em todos os aparelhos da minha casa.",
   },
-
 ];

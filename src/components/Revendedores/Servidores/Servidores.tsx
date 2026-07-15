@@ -71,10 +71,20 @@ const Servidores = ({
                 <div className="servidor__overlay" />
 
                 {servidor.destaque && (
-                  <span className="servidor__highlight">
-                    EM ALTA
-                  </span>
-                )}
+  <span className="servidor__highlight">
+    EM ALTA
+  </span>
+)}
+
+<span
+ className={`servidor__category servidor__category--${servidor.category
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .replace("-", "")}`}
+>
+  {servidor.category}
+</span>
 
                 <div className="servidor__play">
                   <Play

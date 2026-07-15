@@ -75,16 +75,17 @@ const Testimonials = () => {
                   </p>
 
                   <div className="testimonial__user">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                    />
 
-                    <div>
-                      <strong>{item.name}</strong>
-                      <span>{item.role}</span>
-                    </div>
-                  </div>
+  <div className="testimonial__avatar">
+    {item.name.charAt(0)}
+  </div>
+
+  <div>
+    <strong>{item.name}</strong>
+    <span>{item.role}</span>
+  </div>
+
+</div>
 
                 </div>
               </SwiperSlide>
