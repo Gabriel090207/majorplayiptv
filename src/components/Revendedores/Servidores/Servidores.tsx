@@ -1,37 +1,20 @@
 import "./Servidores.css";
 import Reveal from "../../../components/Reveal/Reveal";
-
-import {
-  Check,
-  Clapperboard,
-  Film,
-  Play,
-  Radio,
-  Tv,
-} from "lucide-react";
-
+import { Check } from "lucide-react";
 import { servidores } from "../../../data/servidores";
 
-interface ServidoresProps {
-  limit?: number;
-  buttonText?: string;
-  buttonHref?: string;
+const Servidores = () => {
+  const mensalistas = servidores.filter(
+    (item) => item.category === "Mensalista"
+  );
 
-  footerButtonText?: string;
-  footerButtonHref?: string;
-}
+  const prepagos = servidores.filter(
+    (item) => item.category === "Pré-pago"
+  );
 
-const Servidores = ({
-  limit,
-  buttonText = "QUERO REVENDER",
-  
-
-  footerButtonText = "CONHECER TODOS OS SERVIDORES",
-  footerButtonHref = "/servidores",
-}: ServidoresProps) => {
-  const listaServidores = limit
-    ? servidores.slice(0, limit)
-    : servidores;
+  const pospagos = servidores.filter(
+    (item) => item.category === "Pós-pago"
+  );
 
   return (
     <section className="servidores" id="servidores">
@@ -50,123 +33,65 @@ const Servidores = ({
           </h2>
 
           <p className="servidores__description">
-            Trabalhamos com diferentes opções de servidores para você oferecer
-            qualidade, variedade e estabilidade aos seus clientes.
+            Trabalhamos com diversos servidores para atender todos os perfis de clientes.
           </p>
         </Reveal>
 
-        <div className="servidores__grid">
-  {listaServidores.map((servidor) => (
-            <article
-              key={servidor.id}
-              className="servidor"
-            >
-              <div className="servidor__image">
-                <img
-                  src={servidor.image}
-                  alt={`Servidor ${servidor.title}`}
-                  loading="lazy"
-                />
+        <div className="servidores__lista">
 
-                <div className="servidor__overlay" />
+          <div className="servidores__lista-card">
 
-                {servidor.destaque && (
-  <span className="servidor__highlight">
-    EM ALTA
-  </span>
-)}
+            <div className="servidores__coluna">
+              <h3>Mensalistas</h3>
 
-<span
- className={`servidor__category servidor__category--${servidor.category
-  .normalize("NFD")
-  .replace(/[\u0300-\u036f]/g, "")
-  .toLowerCase()
-  .replace("-", "")}`}
->
-  {servidor.category}
-</span>
+              <ul>
+                {mensalistas.map((item) => (
+                  <li key={item.id}>
+                    <Check size={16} />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                <div className="servidor__play">
-                  <Play
-                    size={22}
-                    fill="currentColor"
-                  />
-                </div>
-              </div>
+            <div className="servidores__coluna">
+              <h3>Pré-pagos</h3>
 
-              <div className="servidor__content">
-                <h3>{servidor.title}</h3>
+              <ul>
+                {prepagos.map((item) => (
+                  <li key={item.id}>
+                    <Check size={16} />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                <p className="servidor__description">
-                  {servidor.description}
-                </p>
+            <div className="servidores__coluna">
+              <h3>Pós-pagos</h3>
 
-                <div className="servidor__features">
-                  <div className="servidor__feature">
-                    <Tv size={18} />
-                    <span>{servidor.channels}</span>
-                  </div>
+              <ul>
+                {pospagos.map((item) => (
+                  <li key={item.id}>
+                    <Check size={16} />
+                    <span>{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                  <div className="servidor__feature">
-                    <Film size={18} />
-                    <span>{servidor.movies}</span>
-                  </div>
+          </div>
 
-                  <div className="servidor__feature">
-                    <Clapperboard size={18} />
-                    <span>{servidor.series}</span>
-                  </div>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="servidores__button"
+          >
+            FALE CONOSCO
+          </a>
 
-                  <div className="servidor__feature">
-                    <Radio size={18} />
-                    <span>{servidor.quality}</span>
-                  </div>
-                </div>
-
-                <div className="servidor__benefits">
-                  <span>
-                    <Check size={15} />
-                    Atualizações frequentes
-                  </span>
-
-                  <span>
-                    <Check size={15} />
-                    Suporte especializado
-                  </span>
-                </div>
-
-                <a
-  href="https://wa.me/5511999999999"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="servidor__button"
->
-  {buttonText}
-</a>
-              </div>
-            </article>
-          ))}
         </div>
-
-        <Reveal
-          as="div"
-          className="servidores__footer"
-        >
-          <p>
-            Ainda está em dúvida sobre qual servidor escolher?
-          </p>
-
-         <a
-  href={footerButtonHref}
-  className="servidores__button"
->
-  <Play
-    size={18}
-    fill="currentColor"
-  />
-  {footerButtonText}
-</a>
-        </Reveal>
 
       </div>
     </section>

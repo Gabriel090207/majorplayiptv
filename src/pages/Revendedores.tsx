@@ -8,7 +8,7 @@ const Revendedores = () => {
     <>
       <Hero />
 
-      <Servidores limit={8} />
+      <Servidores />
 
       <Vantagens />
 
